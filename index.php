@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-
+        <h1>Schedule management system v0.01</h1>
     </header>
 </body>
 </html>
