@@ -12,6 +12,8 @@
     <title>Ekran startowy</title>
 </head>
 <body>
-    <header></header>
+    <header>
+
+    </header>
 </body>
 </html>
