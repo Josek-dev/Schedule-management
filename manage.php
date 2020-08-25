@@ -31,7 +31,30 @@
 </header>
 <main id="container">
     <nav id="left-bar">
-
+        <h3>Nawigacja</h3>
+        <hr>
+        <ul class="side-menu">
+            <li id="gabinety">Gabinety <i class="fas fa-angle-down"></i>
+                <ul id="gabinety_list">
+                    <li>Dodaj gabinet</li>
+                    <li>Wybierz gabinet</li>
+                </ul>
+            </li>
+            <li id="grafiki">Grafik <i class="fas fa-angle-down"></i>
+                <ul id="grafiki_list">
+                    <li>Dzienny</li>
+                    <li>Tygodniowy</li>
+                    <li>Gabinety</li>
+                </ul>
+            </li>
+            <li id="lekarze">Lekarze <i class="fas fa-angle-down"></i>
+                <ul id="lekarze_list">
+                    <li>Dodaj lekarza</li>
+                    <li>Sprawdź grafik</li>
+                    <li>Statystyki godzin</li>
+                </ul>
+            </li>
+        </ul>
     </nav>
     <section id="content">
 

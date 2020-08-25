@@ -1,6 +1,7 @@
 :root {
     --main: #4285F4;
     --gradient: linear-gradient(45deg, rgba(66, 183, 245, 0.8) 0%, rgba(66, 245, 189, 0.4) 100%);
+    --babyblue: rgba(66, 183, 245, 0.8);
 }
 
 * {
@@ -24,7 +25,7 @@ body {
     height: 75px;
     background: var(--gradient);
     color: #000000;
-    border-bottom: 3px solid var(--main);
+    border-bottom: 3px solid var(--babyblue);
 }
 
 h1 {
@@ -48,7 +49,7 @@ h1:hover {
 
 #user {
     width: 25%;
-    background: var(--main);
+    background:var(--babyblue);
     align-self: flex-end;
     box-sizing: border-box;
     justify-content: center;
@@ -61,6 +62,12 @@ h1:hover {
 
 #user a {
     color: #ffffff;
+    transition: 5s all;
+    text-decoration: underline;
+}
+
+#user a:hover {
+    text-decoration: none;
 }
 
 #user strong {
@@ -75,6 +82,7 @@ h1:hover {
     color: #ffffff;
     font-family: Lato, Helvetica, sans-serif;
     font-size: 12px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
 }
 
 
@@ -88,23 +96,33 @@ h1:hover {
 }
 
 #left-bar {
+    background: #333333;
     width: 25%;
     height: 100%;
-    background: antiquewhite;
+    padding: 5px;
+    box-sizing: border-box;
     min-height: 500px;
+    margin: 0;
+}
+
+#left-bar hr {
+    border: 0;
+    background: #555;
+    height: 1px;
+    width: 50%;
 }
 
 #content {
     width: 75%;
     min-height: 500px;
     height: 100%;
-    background: red;
+    background: #eeeeee;
     margin: 0;
 }
 
 #hidden {
     width: 50px;
-    background: var(--main);
+    background: var(--babyblue);
     align-self: flex-end;
     box-sizing: border-box;
     justify-content: center;
@@ -125,4 +143,26 @@ h1:hover {
     font-size: 24px;
     align-self: center;
     padding: 10px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+
+h3 {
+    font-family: "Roboto Thin", sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+
+}
+
+main > * {
+    margin: 0 5px;
+}
+
+.side-menu li {
+    list-style: none;
+    color: #fff;
+}
+
+#gabinety_list, #grafiki_list, #lekarze_list {
+    display: none;
 }
