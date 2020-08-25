@@ -19,7 +19,7 @@
             $user = $stmt->fetch();
 
             if ($login && password_verify($password, $user['password'])) {
-                $_SESSION["logged"]=TRUE;
+                $_SESSION["logged"]=$login;
                 echo "zalogowano!";
                 header('Location: manage.php');
             }
