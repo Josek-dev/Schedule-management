@@ -163,6 +163,6 @@ main > * {
     color: #fff;
 }
 
-#gabinety_list, #grafiki_list, #lekarze_list {
+#gabinety-list, #grafiki-list, #lekarze-list {
     display: none;
 }

@@ -1,29 +1,37 @@
 <?php
-    session_start();
-    include "config.php";
 
-    if(isset($_SESSION['logged']) ) {
+use mysql_xdevapi\DatabaseObject;
+
+session_start();
+include "config.php";
+
+    if(isset($_SESSION['logged']))
+    {
         header('Location: manage.php');
         exit;
     }
 
-    if(isset($_POST['sign'])) {
-
+    if(isset($_POST['sign']))
+    {
         $login = htmlspecialchars($_POST['login'], ENT_QUOTES);
         $password = $_POST['password'];
 
-        if(!empty($login) && !empty($password)) {
+        if(!empty($login) && !empty($password))
+        {
+            /** @var DatabaseObject $conn */
 
             $stmt = $conn->prepare("SELECT * FROM users WHERE login = ?");
             $stmt->execute([$login]);
             $user = $stmt->fetch();
 
-            if ($login && password_verify($password, $user['password'])) {
+            if ($login && password_verify($password, $user['password']))
+            {
                 $_SESSION["logged"]=$login;
                 echo "zalogowano!";
                 header('Location: manage.php');
             }
-            else {
+            else
+            {
                 echo "Podano niewłaściwe hasło";
             }
         }

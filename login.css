@@ -24,7 +24,7 @@ body {
     border-radius: 20px;
 }
 
-header {
+#top {
     margin: 0 auto;
     text-align: center;
     display: flex;
@@ -102,7 +102,7 @@ label {
     border: 0;
     padding: 10px 15px;
     border-radius: 5px;
-    color: #ffffff;
+    color: #fff;
     font-family: "Roboto Medium", Roboto sans-serif;
     font-weight: 500;
     font-size: 12px;

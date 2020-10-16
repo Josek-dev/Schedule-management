@@ -1,10 +1,12 @@
 <?php
     session_start();
     include "config.php";
-    if(!isset($_SESSION["logged"])) {
+    if(!isset($_SESSION["logged"]))
+    {
         echo "Brak dostępu!";
     }
-    else {
+    else
+    {
 ?>
 <!doctype html>
 <html lang="en">
@@ -25,7 +27,11 @@
     <div id="hidden" class="hide"><i class="fas fa-user"></i></div>
     <div id="user" style="display:none;">
         <p>
-            <?php echo "Jesteś zalogowany jako <strong>&nbsp;{$_SESSION["logged"]}</strong> <a href='manage.php?link=logout'>[wyloguj]</a>";?>
+            <?php
+                echo "Jesteś zalogowany jako <strong>&nbsp;" +
+                      "{$_SESSION["logged"]}</strong>" +
+                      "<a href='manage.php?link=logout'>[wyloguj]</a>";
+            ?>
         </p>
     </div>
 </header>
@@ -35,20 +41,20 @@
         <hr>
         <ul class="side-menu">
             <li id="gabinety">Gabinety <i class="fas fa-angle-down"></i>
-                <ul id="gabinety_list">
+                <ul id="gabinety-list">
                     <li>Dodaj gabinet</li>
                     <li>Wybierz gabinet</li>
                 </ul>
             </li>
             <li id="grafiki">Grafik <i class="fas fa-angle-down"></i>
-                <ul id="grafiki_list">
+                <ul id="grafiki-list">
                     <li>Dzienny</li>
                     <li>Tygodniowy</li>
                     <li>Gabinety</li>
                 </ul>
             </li>
             <li id="lekarze">Lekarze <i class="fas fa-angle-down"></i>
-                <ul id="lekarze_list">
+                <ul id="lekarze-list">
                     <li>Dodaj lekarza</li>
                     <li>Sprawdź grafik</li>
                     <li>Statystyki godzin</li>
@@ -63,13 +69,13 @@
 </body>
 </html>
 <?php }
-        $link = $_GET["link"];
+        $link = $_GET['link'];
 
-        if($link === "logout") {
+        if($link === "logout")
+        {
             $_SESSION = array();
             session_destroy();
             sleep(2);
             header("Location: index.php");
         }
-
 ?>

@@ -10,11 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="login.css">
     <script src="scripts.js"></script>
-    <title>Ekran startowy</title>
+    <title>Home</title>
 </head>
 <body>
     <main class="container">
-        <header>
+        <header id="top">
             <h1>Schedule management system</h1>
             <h2>Login to manage or display</h2>
         </header>
@@ -22,7 +22,7 @@
             <form action="login.php" method="POST">
                 <label for="login">Login</label>
                 <input type="text" name="login" id="login">
-                <label for="password">Hasło</label>
+                <label for="password">Password</label>
                 <input type="password" name="password" id="password">
                 <input type="submit" id="sign" name="sign">
             </form>
