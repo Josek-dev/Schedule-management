@@ -4,7 +4,7 @@
 
     if(isset($_SESSION['logged']) ) {
         header('Location: manage.php');
-        exit;
+    a    exit;
     }
 
     if(isset($_POST['sign'])) {
